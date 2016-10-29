@@ -66,3 +66,10 @@ export class QoutePipe implements PipeTransform {
     return '"' + value.toString() + '"';
   }
 }
+
+@Pipe({name: 'object-keys'})
+export class ObjectKeysPipe implements PipeTransform {
+  transform(value: any): Object[] {
+    return Object.keys(value);
+  }
+}
